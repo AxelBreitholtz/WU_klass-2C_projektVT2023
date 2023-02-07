@@ -10,19 +10,97 @@
 
 #grid_wrapper_start {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px 400px 100px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 100px 400px 800px 100px;
+    grid-template-areas:
+    "he na" 
+    "s1 s1"
+    "s2 s2"
+    "fo fo";
 }
+
+#welcome_text_section {
+    grid-area: s1;
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10% 0 10%;
+    
+}
+
+#actual_updates_section {
+    grid-area: s2;
+    background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 0 10%;
+}
+
+#burger {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#burger div {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 20%;
+    transition: all 1s;
+}
+
+#img_vapen {
+    height: 100px;
+    width: auto;
+}
+
+
+
 
 
 /*Styling av CLASS */
 
 /* Start Sida */
 
+.start_p {
+    text-align: center;
+}
 
 /* Styling av taggar */
 
 /* Start Sida */
+header {
+    grid-area: he;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    background-color: black;
+
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+}
+
+footer {
+    grid-area: fo;
+    background-color: blanchedalmond;
+}
+
+img {
+    height: 200px;
+    width: auto;
+    margin: 30px;
+}
 
 /* Media Queries */
 
