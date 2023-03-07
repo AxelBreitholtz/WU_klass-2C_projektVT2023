@@ -9,6 +9,19 @@
 
 /* Styling av ID */
 
+#grid_wrapper_start {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 1100px 600px 300px;
+    grid-template-areas: 
+    "s1"
+    "s2"
+    "s3"
+    "fo"
+    ;
+}
+
 #grid_wrapper_styrelse {
     background-color: #fff;
     height: 100vh;
@@ -16,7 +29,8 @@
 }
 
 #welcome_text_section {
-    margin: 175px 30px 50px 30px;
+    grid-area: s1;
+    margin: 250px 30px 250px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,16 +38,25 @@
     color: #fff;
     background-color: rgb(0,63,94);
     padding: 20px;
+    border-radius: 1px;
 }
 
 #actual_updates_section {
-    margin-top: 150px;
     grid-area: s2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 10% 0 10%;
+    padding-top: 20px;
+    background-color: #fff;
+    color: #1f1f1f;
+}
+
+#förening_information {
+    grid-area: s3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #img_area {
@@ -49,6 +72,10 @@
     z-index: -1;
 }
 
+#slaktfoto {
+    height: auto;
+    width: 90%;
+}
 
 #burger {
     margin-right: 30px;
@@ -61,7 +88,7 @@
     height: 3px;
     margin: 5px;
     border-radius: 20%;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 #link_list {
@@ -76,7 +103,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    transition: all 0.5s;    
+    transition: all 0.25s;    
     font-size: 20px;
 }
 
@@ -85,7 +112,7 @@
     margin-top: 80px;
 }
 
-#img_vapen {
+.img_vapen {
     height: 80px;
     width: auto;
     margin-right: 5px;
@@ -98,11 +125,33 @@
     align-items: center;
 }
 
-
-
-
-
 /*Styling av CLASS */
+
+.information_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.update_article {
+    height: auto;
+    width: 90vw;
+    background-color: rgb(0,63,94);
+    margin-bottom: 40px;
+    padding: 0px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+
+.update_date {
+    
+}
 
 .start_p {
     text-align: center;
@@ -133,7 +182,6 @@ body {
 
 h1 {
     font-family: 'Libre Caslon Text', serif;
-
     color: #fff;
     font-size: 30px;
 }
@@ -156,7 +204,10 @@ h2 {
 }
 
 footer {
-    background-color: rgb(0,63,94);
+    margin-top: 40px;
+    background-color: rgb(0,60,90);
+    display: flex;
+    justify-content: center;
 }
 
 img {
