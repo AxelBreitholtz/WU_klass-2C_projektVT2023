@@ -11,7 +11,7 @@ function toggleMenu() {
         menu_visible = false
     }
     else {
-        document.getElementById('nav').style.backgroundColor= "rgb(" + 0 + ", " + 63 + ", " + 94 + ")";
+        document.getElementById('nav').style.backgroundColor= "rgb(" + 39 + ", " + 51 + ", " + 83 + ")";
         menu_visible = true
     }    
 }

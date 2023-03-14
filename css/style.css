@@ -11,9 +11,10 @@
 
 #grid_wrapper_start {
     height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh 1100px 600px 300px;
+    grid-template-rows: 100vh auto 600px 300px;
     grid-template-areas: 
     "s1"
     "s2"
@@ -22,21 +23,28 @@
     ;
 }
 
-#grid_wrapper_styrelse {
-    background-color: #fff;
-    height: 100vh;
-    display: grid;
+#wrapper_styrelse {
+    position: absolute;
+    top: 0;
+    padding-top: 100px;
+    background-color: #F3F1EF;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #welcome_text_section {
     grid-area: s1;
-    margin: 250px 30px 250px 30px;
+    margin: 200px 30px 200px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fff;
-    background-color: rgb(0,63,94);
+    background-color: #273353;
     padding: 20px;
     border-radius: 1px;
 }
@@ -48,8 +56,8 @@
     justify-content: space-evenly;
     align-items: center;
     padding-top: 20px;
-    background-color: #fff;
-    color: #1f1f1f;
+    background-color: #F3F1EF;
+    color: #273353;
 }
 
 #förening_information {
@@ -57,7 +65,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
+    color: #273353;;
 }
+
+#nav{
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+
+#styrelse_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#information_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
 
 #img_area {
     position: absolute;
@@ -96,6 +135,7 @@
     top: -100vh;
     list-style: none;
     background-color: #fff;
+    color: #273353;
     height: 100vh;
     width: 100%;
     
@@ -127,30 +167,70 @@
 
 /*Styling av CLASS */
 
-.information_article {
+.nav_other {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between ;
     align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
 }
 
 .update_article {
     height: auto;
     width: 90vw;
-    background-color: rgb(0,63,94);
-    margin-bottom: 40px;
-    padding: 0px 10px 20px 10px;
+    background-color: #fff;
+    padding: 10px 10px 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: #fff;
+    color: #273353;
+    margin-bottom: 20px;
+}
+
+.board_member_card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 200px;
+    width: 90vw;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #273353;
+}
+
+.member_info {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-wrap:break-word;
+}
+
+.member_img {
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    background-color: darkblue;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.mail_link {
+    margin-top: 5px;
+    font-size: 10px;
 }
 
 .update_date {
-    
+    font-weight: lighter;
+
 }
 
 .start_p {
@@ -177,7 +257,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(0,63,94);
 }
 
 h1 {
@@ -191,21 +270,10 @@ h2 {
     text-align: center;
 }
 
-#nav{
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: space-between ;
-    align-items: center;
-    height: 80px;
-    width: 100%;
-    z-index: 1;
-}
-
 footer {
+    width: 100%;
     margin-top: 40px;
-    background-color: rgb(0,60,90);
+    background-color: #273353;
     display: flex;
     justify-content: center;
 }
