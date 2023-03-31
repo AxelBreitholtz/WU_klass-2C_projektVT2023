@@ -11,9 +11,8 @@
 
 #grid_wrapper_start {
     height: 100vh;
-    width: 100vw;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-template-rows: 100vh auto 600px 300px;
     grid-template-areas: 
     "s1"
@@ -23,30 +22,44 @@
     ;
 }
 
-#wrapper_styrelse {
+#grid_wrapper_forening {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows:auto auto auto auto auto;
+    grid-template-areas: 
+    "s1"
+    "s2" 
+    "s3"
+    "s4"
+    "fo"
+    ;
+}
+
+#grid_wrapper_slakthistoria {
+
+}
+
+#wrapper {
     position: absolute;
     top: 0;
-    padding-top: 100px;
+    padding-top: 80px;
     background-color: #F3F1EF;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
 #welcome_text_section {
+    width: 100%;
     grid-area: s1;
-    margin: 200px 30px 200px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    background-color: #273353;
-    padding: 20px;
-    border-radius: 1px;
 }
 
 #actual_updates_section {
@@ -81,12 +94,65 @@
     z-index: 1;
 }
 
+#welcome_text_article {
+    height: 30%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #273353;
+    padding: 20% 3% 20% 3%;
+    border-radius: 1px;
+}
+
 #styrelse_section {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #273353;
+}
+
+#slakt_historia_section {
+    height: auto;
+    background-color: #F3F1EF;
+    color: #273353;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 20px 20px 10px;
+}
+
+#besok_slaktrad_section {
+    background-image: url(../img/historic_archive.jpg);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slakttrad_info_sectinon {
+    background-color: #F3F1EF;
+    color: #273353;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+#section_forening {
+    grid-area: s1;
+    padding: 80px 10px 10px 10px;
+    text-align: center;
+    background-color: #F3F1EF;
+    color: #273353;
 }
 
 #information_article {
@@ -95,6 +161,42 @@
     align-items: center;
     text-align: center;
     padding: 10px;
+}
+
+#forening_img1_section {
+    grid-area: s2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#forening_img2_section {
+    grid-area: s3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#forening_img3_section {
+    grid-area: s4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.forening_img {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: solid 2px #F3F1EF;
+}
+
+#forening_h2 {
+    padding-top: 30px;
+    margin: 0px;
+    color: #273353;
 }
 
 
@@ -111,6 +213,11 @@
     z-index: -1;
 }
 
+#slakt_historia_rubric {
+    margin-left: 0;
+    font-size: 2rem;
+}
+
 #slaktfoto {
     height: auto;
     width: 90%;
@@ -122,13 +229,22 @@
 }
 
 #burger div {
-    background-color: white;
     width: 25px;
     height: 3px;
     margin: 5px;
     border-radius: 20%;
     transition: all 0.5s;
 }
+
+.burger_index {
+    background-color: #fff;
+}
+
+.burger_other {
+    background-color: #273353;
+}
+
+
 
 #link_list {
     position: absolute;
@@ -223,6 +339,21 @@
     margin-right: 15px;
 }
 
+.button {
+    padding: 10px;
+    border: #fff solid 2px;
+    border-radius: 2px;
+}
+
+.button:hover {
+    cursor: pointer;
+    border:  #273353 solid 3px;
+}
+
+#button_text {
+    color: #fff;
+}
+
 .mail_link {
     margin-top: 5px;
     font-size: 10px;
@@ -231,6 +362,10 @@
 .update_date {
     font-weight: lighter;
 
+}
+
+#other_h1 {
+    color: #273353;
 }
 
 .start_p {
@@ -252,17 +387,10 @@
 
 /* Styling av taggar */
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 h1 {
     font-family: 'Libre Caslon Text', serif;
     color: #fff;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 h2 {
@@ -272,10 +400,10 @@ h2 {
 
 footer {
     width: 100%;
-    margin-top: 40px;
     background-color: #273353;
     display: flex;
     justify-content: center;
+    grid-area: fo;
 }
 
 img {
@@ -285,8 +413,14 @@ img {
 }
 
 a {
-    color:rgb(0,63,94);
+    color:#273353;
     text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 /* Media Queries */
