@@ -131,7 +131,7 @@
     height: 100vh;
     width: 100vw;
 
-    background-image: url(/img/tallin.jpg);
+    background-image: url(../img/tallin.jpg);
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -333,7 +333,7 @@
     border-radius: 50%;
     margin-left: 10px;
     margin-right: 15px;
-    filter: grayscale();
+    filter: grayscale(1);
 }
 
 .button {
@@ -428,18 +428,10 @@ body {
 
 @media screen and (min-width: 700px) {
 
-#nav {
-
-}
-
 #link_list {
     position: static;
-    list-style: none;
-    background-color: #fff;
-    color: #273353;
     height: 80px;
     width: 100vw;
-    
     display: inline;
     text-align:end;
     padding-top: 30px;
@@ -461,16 +453,8 @@ h1 {
 
 /* Startsida */
 #grid_wrapper_start{
-    height: 100vh;
     width: 100vw;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 100vh auto auto 200px;
-    grid-template-areas: 
-    "s1"
-    "s2"
-    "s3"
-    "fo"
-    ;
 }
 
 #welcome_text_article {
@@ -498,15 +482,10 @@ h2 {
     width: 40%;
     border-radius: 50%;
     z-index: 0;
-
-    
 }
 
 #welcome_text_section {
-    grid-area: s1;
-    display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: flex-end;
     background-color: #273353;
     margin-top: 80px;
@@ -549,21 +528,14 @@ p {
 .wrapper {
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
     flex-wrap: wrap;
 }
 
 .board_member_card {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     height: 400px;
     width: 300px;
     background-color: #fff;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: #273353;
 }
 
 .member_info {
@@ -571,6 +543,10 @@ p {
     align-items: center;
 }
 
+.member_img{
+    height: 200px;
+    width: 200px;
+}
 /* Historia */
 #slakt_historia_section {
     padding-right: 40%;
@@ -581,8 +557,6 @@ p {
 #grid_wrapper_forening {
     background-color: #F3F1EF;
     padding-top: 80px;
-    height: 100vh;
-    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 250px 250px 250px 200px;
     grid-template-areas: 
@@ -594,11 +568,8 @@ p {
 }
 
 #section_forening {
-    grid-area: s1f;
     padding: 20px 10px 10px 30px;
     text-align: start;
-    background-color: #F3F1EF;
-    color: #273353;
 }
 
 #forening_img1_section{
