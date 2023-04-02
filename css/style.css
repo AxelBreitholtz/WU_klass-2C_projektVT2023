@@ -104,7 +104,8 @@
 }
 
 #styrelse_section {
-    padding-top: 90px;
+    padding-top: 150px;
+    padding-bottom: 50px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -327,12 +328,12 @@
 }
 
 .member_img {
-    height: 135px;
-    width: 135px;
+    height: 155px;
+    width: 155px;
     border-radius: 50%;
-    background-color: darkblue;
     margin-left: 10px;
     margin-right: 15px;
+    filter: grayscale();
 }
 
 .button {
@@ -476,9 +477,10 @@ h1 {
     height: 100%;
     width: 50vw;
     margin-top: 160px;
-    padding: 100px 0px 0px 10px;
+    padding: 100px 0px 0px 50px;
     align-items: flex-start;
     justify-content: flex-start;
+    text-align: left;
 }
 
 .start_p {
@@ -491,19 +493,13 @@ h2 {
 }
 
 #img_area {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50%;
-    margin-top: 80px;
+    position: static;
+    height: 40vw;
+    width: 40%;
+    border-radius: 50%;
+    z-index: 0;
 
-    background-image: url(/img/tallin.jpg);
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    z-index: -1;
-    overflow-x: hidden;
+    
 }
 
 #welcome_text_section {
@@ -512,6 +508,9 @@ h2 {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-end;
+    background-color: #273353;
+    margin-top: 80px;
+    
 }
 
 #actual_updates_section {
@@ -580,10 +579,12 @@ p {
 
 /* Förening */
 #grid_wrapper_forening {
+    background-color: #F3F1EF;
+    padding-top: 80px;
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows:250px 250px 250px 200px;
+    grid-template-rows: 250px 250px 250px 200px;
     grid-template-areas: 
     "s1f s2f"
     "s1f s3f" 
@@ -594,37 +595,61 @@ p {
 
 #section_forening {
     grid-area: s1f;
-    padding: 80px 10px 10px 10px;
+    padding: 20px 10px 10px 30px;
     text-align: start;
     background-color: #F3F1EF;
     color: #273353;
-    border-right: solid #273353;
 }
 
 #forening_img1_section{
     background-color: #F3F1EF;
+    justify-content: flex-end;
 }
 
 #forening_img2_section{
     background-color: #F3F1EF;
+    align-items: flex-end;
 }
 
 #forening_img3_section{
     background-color: #F3F1EF;
+    align-items: flex-end;
 }
 
 .forening_img{
-
     width: 80%;
 }
 
 #forening_h2 {
-    padding-top: 80px;
+    display: none;
 }
 
 .non_center_forening {
     text-align: start;
     padding-right: 100px;
 }
+
+/* Träd */
+
+#besok_slaktrad_section {
+    width: 50%;
+    height: 100vh;
+}
+
+#slakttrad_info_sectinon {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 30px 0px 30px;
+    height: 100vh;
+    width: 50%;
+}
+
+#wrapper_trad {
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
 
 }
