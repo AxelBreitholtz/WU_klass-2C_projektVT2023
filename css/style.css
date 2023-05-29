@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Caslon+Text&family=Roboto&display=swap');
 
 *{
     margin: 0;
@@ -19,6 +19,7 @@
     height: 80px;
     width: 100%;
     z-index: 1;
+    padding-left: 10px;
 }
 
 #img_area {
@@ -33,6 +34,7 @@
     color: #fff;
     z-index: -1;
     overflow-x: hidden;
+    filter: brightness(50%);
 }
 
 #welcome_text_article {
@@ -44,16 +46,17 @@
     justify-content: center;
     text-align: center;
     color: #fff;
-    background-color: #273353;
-    padding: 20% 3% 20% 3%;
+    padding: 120px 10px 120px 10px;
     border-radius: 1px;
+    overflow-x: wrap;
 }
 
 #grid_wrapper_start {
+    overflow-x: hidden;
     height: 100vh;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh auto auto 200px;
+    grid-template-rows: 100vh auto auto 150px;
     grid-template-areas: 
     "s1"
     "s2"
@@ -76,8 +79,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 20px;
-    background-color: #F3F1EF;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color:#F2F2F2;
     color: #273353;
 }
 
@@ -86,21 +90,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #fff;
     color: #273353;
+    padding: 120px 50px 120px 50px;
 }
 
 .update_article {
     height: auto;
     width: 90vw;
     background-color: #fff;
-    padding: 10px 10px 20px 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     color: #273353;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 
@@ -114,13 +121,13 @@
     font-weight: lighter;
     text-align: center;
     font-size: 1rem;
+    margin-bottom: 5px;
 }
 
 .update_rubric {
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: left;
-    font-size:1.3rem;
+    font-size: 1.3rem;
 }
 
 .home {
@@ -130,13 +137,40 @@
 
 /*  slakt_forening */
 
+
+.under_heading {
+    margin: 30px;
+    font-size: 20px;
+}
+
+#h2_forening{
+    font-weight: 900;
+    font-weight: 42.3580103px;
+    width: 60vh;
+    margin-bottom: 10px;
+}
+
+#pone_forening{
+    font-weight:600;
+    font-size: 16.18px;
+    width: 60vh;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+#ptwo_forening{
+    margin-top: -10px;
+    font-weight: 500;
+    font-size: 10px;
+    width: 50vh;
+}
+
 #grid_wrapper_forening {
-    background-color: #F3F1EF;
+    background-color: #F2F2F2;
     margin-top: 80px;
     height: 100vh;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows:40vh 30vh auto auto auto auto 350px 40px 400px 400px 400px 400px 400px 400px 200px;
+    grid-template-rows:40vh 30vh auto auto auto auto 350px auto 400px 400px 400px 400px 400px 400px 200px;
     grid-template-areas: 
     "s1f"
     "s2f" 
@@ -165,6 +199,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 40px;
 }
 
 #slakt_forening_section2 {
@@ -173,6 +208,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+
+#home_img {
+    height: auto;
+    width: 80%;
 }
 
 #section_forening_info_1{
@@ -195,7 +235,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F3F1EF;
+    background-color: #fff;
 }
 
 #section_medlem_1 {
@@ -218,13 +258,13 @@
 }
 
 #heading_styrelse {
-    grid_area: hsf;
+    grid-area: hsf;
     color: #273353;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    margin-bottom: 10px;
+    align-items: flex-end;
+    padding-top: 160px;
+    padding-bottom: 40px;
 }
 
 .board_member_card {
@@ -235,11 +275,11 @@
     margin-left: 10vw;
     padding-top: 10px;
     width: 80vw;
-    background-color: #F3F1EF;
+    background-color: #fff;
     margin-bottom: 20px;
     margin-top: 20px;
     color: #273353;
-    border-radius: 2px;
+    border-radius: 5px;
     box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
 }
 
@@ -257,13 +297,13 @@
 }
 
 .small_paragraph_forening {
-    font-size: 0.8rem;
+    font-size: 16.18px;
     font-weight:500;
     text-align: left;
 }
 
 .section_forening_info {
-    background-color: #fff;
+    background-color: #F2F2F2;
     color: #273353;
     font-weight: 900;
     display: flex;
@@ -271,7 +311,7 @@
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    padding: 20px 20px 0px 20px;
+    padding: 80px 20px 0px 20px;
     overflow-wrap: break-word;
 }
 
@@ -319,17 +359,17 @@
     justify-content: center;
     text-align: center;
     height: 60vh;
-    padding: 20px;
+    padding: 120px 20px 120px 20px;
 }
 
 #slakt_historia_section2 {
     height: auto;
-    background-color: #F3F1EF;
+    background-color: #F2F2F2;
     color: #273353;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    align-items: center;
+    padding: 120px 20px 120px 20px;
 }
 
 #slakt_historia_section3 {
@@ -339,13 +379,15 @@
     align-items: center;
     width: 100vw;
     height: auto;
-    padding: 20px;
+    padding: 120px 20px 120px 20px;
+    background-color: #fff;
 }
 
 #slakt_historia_section4 {
     background-image: url(../img/bakgrund_historia.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    filter: brightness(70%);
     color: #fff;
     height: 50vh;
     width: 100vw;
@@ -353,23 +395,83 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F3F1EF;
+    background-color: #F2F2F2;
     text-align: center;
 }
 
+#breitholtz_historia {
+    padding: 50px;
+    width: 80vw;
+}
+
+.under_section {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
+    padding: 30px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.small_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text_holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 60px;
+
+}
+.text_holder2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 60px;
+}
+
+.text_holder3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 60px;
+}
+
 #slakt_historia_rubric {
-    margin-left: 0;
-    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 #slakt_historia_heading {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    font-size: 40px;
 }
 
 .historia_info {
     text-align: left;
-    margin-bottom: 30px;
-    width: 90vw;
+    margin-bottom: 25px;
+}
+
+.historia_info2 {
+    text-align: left;
+    margin-bottom: 25px;
 }
 
 /*  slakt_trad */
@@ -392,32 +494,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 120px 20px 120px 20px;
 }
 
 #slakttrad_section3 {
     height: auto;
     color: #273353;
-    background-color: #F3F1EF;
+    background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 120px 20px 120px 20px;
 }
 
 #slakttrad_section1 {
     color: #fff;
-    background-image: url(../img/slakttrad.jpg);
+    background-image: url(../img/slakttradps.jpg);
     background-position: center;
+    filter: brightness(70%);
     background-size: cover;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 60px;
+    text-align: center;
+    padding: 120px 20px 120px 20px;
 }
 
 
@@ -438,6 +542,18 @@
 
 
 /* global */
+
+
+.one_higher_golden {
+    font-size: 26.17924px;
+    margin-bottom: 40px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16.18px;
+    font-weight: 500;
+}
 
 footer {
     width: 100vw;
@@ -548,6 +664,7 @@ footer {
     padding-left: 5%;
     padding-right: 5%;
     color: #273353;
+    margin-bottom: 60px;
 }
 
 .sido_bild{
@@ -571,6 +688,7 @@ footer {
     border: #273353 solid 2px;
     background-color: #273353;
     border-radius: 20px;
+    margin-top: 36px;
 }
 
 .button:hover {
@@ -605,6 +723,7 @@ p {
 }
 
 body {
+    background-color: #F2F2F2;
     overflow-x: hidden;
 }
 
@@ -637,24 +756,30 @@ h1 {
 }
 
 /* Startsida */
+
+#nav {
+    background-color: #fff;
+}
+
 #grid_wrapper_start{
     width: 100vw;
-    grid-template-rows: 100vh auto 600px 200px;
+    grid-template-rows: 100vh auto 600px 150px;
 }
 
 #welcome_text_article {
-    height: 100%;
-    width: 50vw;
-    margin-top: 160px;
-    padding: 100px 0px 0px 50px;
+    height: 100vh;
+    width: 30vw;
+    padding: 220px 0px 0px 50px;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
+    background-color: #273353;
+    margin-left: 5vw;
 }
 
-.home_p {
+#home_p {
     margin: 0px;
-    margin-top: 20px;
+    font-size: 16.18px;
 }
 
 h2 {
@@ -662,19 +787,13 @@ h2 {
 }
 
 #img_area {
-    position: static;
-    height: 40vw;
-    width: 40%;
-    border-radius: 50%;
-    z-index: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
 }
 
 #index_section1 {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    background-color: #273353;
-    margin-top: 80px;
-    
+    align-items: flex-start;
 }
 
 #index_section2 {
@@ -682,7 +801,7 @@ h2 {
 }
 
 #index_section3 {
-    background-color: #F3F1EF;
+    background-color: #F2F2F2;
     flex-direction: row;
 }
 
@@ -693,9 +812,7 @@ p {
 .sido_bild {
     height: 90%;
     width: auto;
-    padding: 60px;
     display: flex;
-    padding-right: 10%;
 }
 
 #update_flex_change {
@@ -706,15 +823,12 @@ p {
 }
 
 .update_article {
-    height: 500px;
-    width: 300px;
+    height: auto;
+    width: 350px;
     margin-top: 10px;
     margin-right: 20px;
-    background-color: #F3F1EF;
-}
-
-.update_rubric {
-    margin-bottom: -10px;
+    background-color: #F2F2F2;
+    box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
 }
 
 /* Styrelse */
@@ -733,27 +847,71 @@ p {
     width: 115px;
 }
 /* Historia */
+
+.under_section {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.text_holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80vw;
+    margin-top: -10px;
+    margin-bottom: 60px;
+}
+
+.text_holder2 {
+    width: 80vw;
+    margin-top: -10px;
+}
+
+.historia_info3 {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 80%;
+}
+
+.text_holder3 {
+    width: 80vw;
+    margin-top: -10px;
+    margin-bottom: 60px;
+}
+
+#breitholtz_historia {
+    width: 20vw;
+}
+
+
 #wrapper_slakthistoria {
     align-items: flex-start;
 }
 
 #slakt_historia_section1 {
-    align-items: flex-start;
-    text-align: left;
-    padding-right: 40%;
-    padding-left: 200px;
+    text-align: center;
+    padding-right: 25%;
+    padding-left: 25%;
+    padding: 120px;
 }
 
 #slakt_historia_section2 {
     width: 100vw;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 120px 0px 120px 0px;
 }
 
 #slakt_historia_section3 {
     flex-direction: row;
     justify-content: flex-end;
-    padding-left: 30px;
+    padding: 120px;
 }
 
 #slakt_historia_section4 {
@@ -761,22 +919,28 @@ p {
 }
 
 #slakt_historia_heading {
-    padding-left: 30px;
-    margin-bottom: -20px;
 }
 
 .historia_info {
     text-align: left;
-    padding: 30px;
-    width: 30vw;
-    margin-bottom: -10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 500px;
+}
+
+.historia_info2 {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 700px;
 }
 
 .sido_article {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px;
     width: 50vw;
+    margin-bottom: 0px;
 }
 
 .center_container {
@@ -799,26 +963,23 @@ p {
 
 /* Förening */
 #grid_wrapper_forening {
+    background-color: #F2F2F2;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 60vh 50vh 70px 200px 200px 200px 200px 200px 200px 150px;
+    grid-template-rows: 60vh auto auto auto 200px 200px 200px 150px;
     grid-template-areas: 
     "s1f s1f s2f s2f"
     "s3f s4f s5f s6f"
+    "s7f s7f s7f s7f"
     "hsf hsf hsf hsf"
-    "s7f s7f s8f s8f"
-    "s7f s7f s9f s9f"
-    "s7f s7f s10f s10f"
-    "s7f s7f s11f s11f"
-    "s7f s7f s12f s12f"
-    "s7f s7f s13f s13f"
+    "s8f s8f s9f s9f"
+    "s10f s10f s11f s11f"
+    "s12f s12f s13f s13f"
     "fo fo fo fo"
     ;
 }
 
 #heading_styrelse {
-    background-color: #fff;
-    justify-content: flex-start;
-    padding-left: 7.5vw;
+    background-color: #F2F2F2;
 }
 
 #slakt_forening_section1 {
@@ -830,47 +991,52 @@ p {
 }
 
 #section_styrelse_bild {
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #fff;
+    padding: 0px;
+    padding-left: 25px;
+    padding-right: 15px;
+    justify-content: center;
 }
 
 .board_member_card {
     padding: 20px 10px 20px 10px;
     flex-direction: row;
-    width: 80%;
+    width: 40vw;
     height: 150px;
+    background-color: #fff;
+    margin: 0px;
+    margin-left: 5vw;
 }
 
 .section_forening_info {
-    background-color: #F3F1EF;
     justify-content: flex-start;
     align-items: center;
-    padding: 50px 30px 0px 30px;
 }
 
 .small_paragraph_forening {
+    padding: 20px;
+    margin-top: -20px;
     font-size: 0.8rem;
-    font-weight:500;
     text-align: left;
 }
 
 #h2_forening{
     font-weight: 900;
-    font-weight: 1.6rem;
+    font-weight: 42.3580103px;
     width: 60vh;
+    margin-bottom: 0px;
 }
 
 #pone_forening{
     font-weight:600;
-    font-size: 1.1rem;
+    font-size: 16.18px;
     width: 60vh;
+    font-family: 'Libre Caslon Text', serif;
 }
 
 #ptwo_forening{
     margin-top: -10px;
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 10px;
     width: 50vh;
 }
 
@@ -883,7 +1049,9 @@ p {
 }
 
 .forening_img {
-    width: 70%;
+    height: 50%;
+    width: auto;
+    margin: 50px;
 }
 
 #forening_img1 {
@@ -898,55 +1066,40 @@ p {
     height: 60vh;
 }
 
-#hII_trad {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
 
-.hIII_trad {
-    margin-bottom: 10px;
-    font-weight: 600;
+#slakttrad_section1 {
+    padding: 120px;
 }
-
 
 
 #slakttrad_section2 {
     color: #273353;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 20px 30px 0px 30px;
     height: 600px;
     width: 100vw;
 }
 
 #slakttrad_section3 {
-    height: 400px;
+    height: auto;
     flex-direction: row;
-    padding-left: 60px;
-}
-
-#slakttrad_section1 {
-}
-
-#wrapper_trad {
-
+    padding: 100px 50px 100px 50px;
 }
 
 #trad_vapen {
-    height: 90%;
+    height: 100%;
     width: auto;
 }
 
 #hII_trad {
     color: #fff;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 42.3580103px;
 }
 
 .hIII_trad {
     color: #fff;
-    margin-bottom: 10px;
     font-weight: 600;
+    margin-bottom: 24px;
 }
 
 .info_article_trad {
