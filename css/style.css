@@ -544,6 +544,16 @@
 
 /* global */
 
+#hII_trad {
+    color: #fff;
+    font-size: 42.3580103px;
+}
+
+.hIII_trad {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
 
 .one_higher_golden {
     font-size: 26.17924px;
@@ -1091,16 +1101,6 @@ p {
     width: auto;
 }
 
-#hII_trad {
-    color: #fff;
-    font-size: 42.3580103px;
-}
-
-.hIII_trad {
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 24px;
-}
 
 .info_article_trad {
     display: flex;
